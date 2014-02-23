@@ -1,0 +1,240 @@
+/**
+	* @desc			--- Save, Cancel, Disabled, Blue and Pagination button styles throughout control panel
+	* @name			--- _buttons.scss
+	* @author		--- John Boyle
+	*/
+
+// Default button styles
+%btnBase {
+	@include border-radius;
+	@include inline-block;
+	@extend .m0;
+	@extend .m-left6;
+    border-style: solid;
+    border-width: 1px;
+    color: $white;
+    cursor: pointer;
+    font: bold 11px/22px Arial,sans-serif;
+    font-family: Arial, Verdana, sans-serif;
+    outline-offset: -2px;
+	padding: 0px 12px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+	&:first-child { margin-left: 0; }
+	a {
+		color: $white;
+		font-size: 11px;
+		font-weight: bold;
+		text-decoration: none;
+		&:hover { color: $white; }
+	}
+}
+
+// Button States
+// Default Button State
+.default-btn, .default-btn.ui-state-default {
+	@extend %btnBase;
+	border-color: #58585A; outline: 1px solid #a5a5a6; text-shadow: -1px -1px $color-grey-default;
+	background: #7F8183;
+	background: -moz-linear-gradient(top,  #7F8183 10%, #59595B 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(10%,#7F8183), color-stop(100%,#59595B));
+	background: -webkit-linear-gradient(top,  #7F8183 10%,#59595B 100%);
+	background: -o-linear-gradient(top,  #7F8183 10%,#59595B 100%);
+	background: -ms-linear-gradient(top,  #7F8183 10%,#59595B 100%);
+	background: linear-gradient(to bottom,  #7F8183 10%,#59595B 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7F8183', endColorstr='#59595B',GradientType=0 );
+	&:hover {
+		border-color: #231f20; outline: 1px solid #656364;
+		background: #3F3E40;
+		background: -moz-linear-gradient(top,  #3F3E40 20%, #2C282A 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(20%,#3F3E40), color-stop(100%,#2C282A));
+		background: -webkit-linear-gradient(top,  #3F3E40 20%,#2C282A 100%);
+		background: -o-linear-gradient(top,  #3F3E40 20%,#2C282A 100%);
+		background: -ms-linear-gradient(top,  #3F3E40 20%,#2C282A 100%);
+		background: linear-gradient(to bottom,  #3F3E40 20%,#2C282A 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3F3E40', endColorstr='#2C282A',GradientType=0 );
+		color: $white;
+	}
+	&:active {
+		background: #242021;
+		background: -moz-linear-gradient(top,  #242021 0%, #373637 90%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#242021), color-stop(90%,#373637));
+		background: -webkit-linear-gradient(top,  #242021 0%,#373637 90%);
+		background: -o-linear-gradient(top,  #242021 0%,#373637 90%);
+		background: -ms-linear-gradient(top,  #242021 0%,#373637 90%);
+		background: linear-gradient(to bottom,  #242021 0%,#373637 90%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#242021', endColorstr='#373637',GradientType=0 );
+		color: $white;
+	}
+}
+
+// Save Button State
+.save-btn, .save-btn.ui-state-default {
+	@extend %btnBase;
+	border-color: #659941; outline: 1px solid #cfe7cf; text-shadow: -1px -1px #1e7137;
+	background: #80c242;
+	background: -moz-linear-gradient(top,  #80c242 10%, #00753d 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(10%,#80c242), color-stop(100%,#00753d));
+	background: -webkit-linear-gradient(top,  #80c242 10%,#00753d 100%);
+	background: -o-linear-gradient(top,  #80c242 10%,#00753d 100%);
+	background: -ms-linear-gradient(top,  #80c242 10%,#00753d 100%);
+	background: linear-gradient(to bottom,  #80c242 10%,#00753d 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80c242', endColorstr='#00753d',GradientType=0 );
+	&:hover {
+		border-color: #336633; outline: 1px solid #478964;
+		background: #007f40;
+		background: -moz-linear-gradient(top,  #007f40 20%, #0d5529 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(20%,#007f40), color-stop(100%,#0d5529));
+		background: -webkit-linear-gradient(top,  #007f40 20%,#0d5529 100%);
+		background: -o-linear-gradient(top,  #007f40 20%,#0d5529 100%);
+		background: -ms-linear-gradient(top,  #007f40 20%,#0d5529 100%);
+		background: linear-gradient(to bottom,  #007f40 20%,#0d5529 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007f40', endColorstr='#0d5529',GradientType=0 );
+		color: $white;
+	}
+	&:active {
+		background: #134420;
+		background: -moz-linear-gradient(top,  #134420 0%, #066e37 90%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#134420), color-stop(90%,#066e37));
+		background: -webkit-linear-gradient(top,  #134420 0%,#066e37 90%);
+		background: -o-linear-gradient(top,  #134420 0%,#066e37 90%);
+		background: -ms-linear-gradient(top,  #134420 0%,#066e37 90%);
+		background: linear-gradient(to bottom,  #134420 0%,#066e37 90%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#134420', endColorstr='#066e37',GradientType=0 );
+		color: $white;
+	}
+}
+
+// Blue Button State
+.blue-btn, .blue-btn.ui-state-default {
+	@extend %btnBase;
+	border-color: #336699; outline: 1px solid #97b3d9; text-shadow: -1px -1px #369;
+	background: #8eb9e2;
+	background: -moz-linear-gradient(top,  #8eb9e2 10%, #4f7abb 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(10%,#8eb9e2), color-stop(100%,#4f7abb));
+	background: -webkit-linear-gradient(top,  #8eb9e2 10%,#4f7abb 100%);
+	background: -o-linear-gradient(top,  #8eb9e2 10%,#4f7abb 100%);
+	background: -ms-linear-gradient(top,  #8eb9e2 10%,#4f7abb 100%);
+	background: linear-gradient(to bottom,  #8eb9e2 10%,#4f7abb 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8eb9e2', endColorstr='#4f7abb',GradientType=0 );
+	&:hover{
+		border-color: #001a33; outline: 1px solid #5376a5;
+		background: #325da9;
+		background: -moz-linear-gradient(top,  #325da9 20%, #0f407a 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(20%,#325da9), color-stop(100%,#0f407a));
+		background: -webkit-linear-gradient(top,  #325da9 20%,#0f407a 100%);
+		background: -o-linear-gradient(top,  #325da9 20%,#0f407a 100%);
+		background: -ms-linear-gradient(top,  #325da9 20%,#0f407a 100%);
+		background: linear-gradient(to bottom,  #325da9 20%,#0f407a 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#325da9', endColorstr='#0f407a',GradientType=0 );
+		color: $white;
+	}
+	&:active {
+		background: #013467;
+		background: -moz-linear-gradient(top,  #013467 0%, #245196 90%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#013467), color-stop(90%,#245196));
+		background: -webkit-linear-gradient(top,  #013467 0%,#245196 90%);
+		background: -o-linear-gradient(top,  #013467 0%,#245196 90%);
+		background: -ms-linear-gradient(top,  #013467 0%,#245196 90%);
+		background: linear-gradient(to bottom,  #013467 0%,#245196 90%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#013467', endColorstr='#245196',GradientType=0 );
+		color: $white;
+	}
+}
+
+// Disabled Button States
+.disabled-btn, .disabled-btn:hover, .disabled-btn:active, .disabled-btn:visited, 
+.disabled-btn.ui-state-default, .disabled-btn.ui-state-default:hover, .disabled-btn.ui-state-default:active, .disabled-btn.ui-state-default:visited {
+	@extend %btnBase;
+    border-color: #bbbdbf;
+    outline: 1px solid #f1f1f1;
+    color: #929497;
+    text-shadow: 1px 1px $white;
+    cursor: default;
+	margin: 0.5em 0.4em 0.5em 0;
+	background: #edeeee;
+	background: -moz-linear-gradient(top,  #edeeee 0%, #c1c3c5 50%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#edeeee), color-stop(50%,#c1c3c5));
+	background: -webkit-linear-gradient(top,  #edeeee 0%,#c1c3c5 50%);
+	background: -o-linear-gradient(top,  #edeeee 0%,#c1c3c5 50%);
+	background: -ms-linear-gradient(top,  #edeeee 0%,#c1c3c5 50%);
+	background: linear-gradient(to bottom,  #edeeee 0%,#c1c3c5 50%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#edeeee', endColorstr='#c1c3c5',GradientType=0 );
+}
+
+// Secondary Button State
+.secondary-btn, .secondary-btn:visited, 
+.secondary-btn.ui-state-default, .secondary-btn.ui-state-default:visited {
+	@extend %btnBase;
+    border-color: $color-grey2;
+    color: $black;
+    font-weight: normal;
+    background: #C9CaD1;
+    line-height: 18px;
+    text-shadow: none;
+	&:hover { background: #a7a8ae; }
+	&:active { background: #a7a8ae; color: #E7E7E8; }
+}
+.secondary-btn.disabled, .secondary-btn.disabled.ui-state-default { background: #E7E7E8; border-color: #BFBFBF; color: $color-grey2; cursor:default; }
+
+// Cancel Button State
+.cancel-btn, .cancel-btn.ui-state-default {
+	background: none;
+	border: 0 none;
+	border-radius: 0;
+	color: $color-grey-default;
+	cursor: pointer;
+	font-size: 12px;
+	font-weight: normal;
+	text-decoration: underline;
+	&:hover { color: $black; }
+}
+.cancel-btn.ui-state-default span.ui-button-text { text-decoration: underline; padding-right: 0.4em; }
+
+// IE 9 and Below don't support negative outlines - This removes them
+.lt-ie10 button, .lt-ie10 button:hover, .lt-ie10 button:active, .lt-ie10 input[type="button"], .lt-ie10 input[type="button"]:hover, 
+.lt-ie10 input[type="button"]:active, .lt-ie10 .button, .lt-ie10 .button:hover, .lt-ie10 .button:active { outline:none; }
+.lt-ie10 .ui-button-text-only .ui-button-text { padding: .3em 0 !important; }
+
+.lt-ie8 button, .lt-ie8 .button  {display: inline; zoom: 1; } /* IE7 */
+
+/* Correct FF button padding */
+@-moz-document url-prefix() {
+	button::-moz-focus-inner, input::-moz-focus-inner, input[type="reset"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="submit"]::-moz-focus-inner, input[type="file"] > input[type="button"]::-moz-focus-inner { border: none; padding: 0;  }
+}
+
+// Pagination
+ul.paging {
+	list-style: none;
+	margin: 0;
+	padding: 6px 0 0;
+	overflow: hidden;
+	li { float: left; text-align: center; }
+	a {
+		@include background-gradient($white, $color-grey3);
+		@include border-radius;
+		border: 1px solid $secondaryColor;
+		color: $color-grey-default;
+		float: left;
+		line-height: 1.4;
+		margin-right: 2px;
+		text-decoration: none;
+		text-shadow: 0 1px 0 $white;
+		width: 28px;
+		&:hover { background: $white; }
+	}
+	.active a {
+		@include background-gradient($mainColor, $mainDarkColor);
+		color: $color-grey4;
+		cursor: default;
+		text-shadow: 0 -1px 0 $mainDarkColor;
+	}
+	.inactive a {
+		background: $color-grey4;
+		color: $secondaryColor;
+		cursor: default;
+		text-shadow: 0 0 0;
+	}
+}
