@@ -1,4 +1,10 @@
-﻿// Create Namespaces
+﻿/*
+    This is a work in progress
+    The idea is to create an app that allows
+    a user to build out a custom form
+*/
+
+// Create Namespaces
 var jb = jb || {};
 jb.web = jb.web || {};
 jb.web.FormBuilder = jb.web.FormBuilder || {};
