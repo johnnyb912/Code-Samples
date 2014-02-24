@@ -1,3 +1,12 @@
+/*
+    This is a function used to set the height on an element 
+    or elements in a jQuery UI dialog.
+    It takes 3 parameters:
+    container: the parent element to base the height on (required)
+    extra: an additional amount to remove from the containers height (optional)
+    cssHeight: the CSS property to set the height to (optional)
+*/
+
 var fixHeightOverflow = function (container, extra, cssHeight) {
 
     // if either optional param are not passed in, set them to a default value

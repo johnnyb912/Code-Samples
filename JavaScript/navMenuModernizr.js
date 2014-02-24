@@ -1,3 +1,9 @@
+/*
+	Using Modernizr to check for touch capabilities, 
+	I wrote this to prevent the top level nav item from 
+	linking on first click when it has a dropdown under it.
+*/
+
 if (Modernizr.touch) {
 	var clicked = false;
 

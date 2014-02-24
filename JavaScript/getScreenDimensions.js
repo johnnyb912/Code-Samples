@@ -1,3 +1,11 @@
+/*
+    A function that returns the current screen dimensions.
+    d: an optional parameter to get just the height or width
+    d can be one of four values: 'w', 'width', 'h', 'height'
+    if no parameter, or something other than the four above,
+    the function returns an object containing both width and height
+*/
+
 var getScreenDimensions = function (d) {
     var iH, iW, screenDimensions = {};
 

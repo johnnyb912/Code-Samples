@@ -1,3 +1,7 @@
+/*
+    A function for displaying a tooltip on hover.
+*/
+
 var Tooltip = function () {
     var xOffset = 20,
         yOffset = 30;

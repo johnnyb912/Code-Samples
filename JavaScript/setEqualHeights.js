@@ -1,3 +1,9 @@
+/*
+	This function is specific to a Concrete5 site where there are 
+	multiple content blocks on the page. This will find the height of 
+	the tallest block and set it's sibling blocks to the same height.
+*/
+
 $('.ccm-layout-row').each(function(index, el){
 
 	// get the number of children in the row that are not of the ccm-spacer class
